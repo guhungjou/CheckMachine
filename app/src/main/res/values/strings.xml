@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">儿童健康晨检系统</string>
+    <string name="name">姓名:</string>
+    <string name="classid">班级:</string>
+    <string name="sex">性别:</string>
+    <string name="age">年龄:</string>
+    <string name="temperature">体温:</string>
+    <string name="hand">手部:</string>
+    <string name="mouth">口部:</string>
+    <string name="eye">眼部:</string>
+    <string name="countdown_max">3</string>
+    <string name="school">学校:</string>
+    <string name="normal">正常</string>
+    <string name="abnormal">异常</string>
+
+</resources>

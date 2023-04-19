@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 29
+
+    defaultConfig {
+        applicationId "com.example0.checkmachine"
+        minSdk 24
+        targetSdk 29
+        versionCode 1
+        versionName "1.0"
+//        applicationId "com.tencent.yolov5ncnn"
+        archivesBaseName = "$applicationId"
+//        ndk {
+//            abiFilters "armeabi-v7a", "x86", "armeabi"
+//        }
+
+        ndk {
+            moduleName "facesdk"
+            ldLibs "log"
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+        ndk {
+            moduleName "ncnn"
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    externalNativeBuild {
+        cmake {
+            version "3.10.2"
+            path file('src/main/jni/CMakeLists.txt')
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.9.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(':SerialportLibrary')
+
+    implementation 'com.github.Jasonchenlijian:FastBle:2.4.0'
+// permission
+    implementation 'com.yanzhenjie:permission:2.0.0-rc4'
+    implementation 'com.android.support:exifinterface:27.1.1'
+//AILink SDK
+   // implementation 'com.github.elinkthings:AILinkSDKRepositoryAndroid:+'//蓝牙库(必须)
+  //  implementation 'com.github.elinkthings:AILinkSDKParsingLibraryAndroid:+'//解析库(包含算法),需要依赖蓝牙库(非必须,建议依赖)
+
+    //compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation project(':facelibrary')
+    //api project(':facelibrary')
+    implementation project(':datalibrary')
+    implementation project(':registerlibrary')
+    implementation project(':attendancelibrary')
+    implementation project(path: ':face-sdk-library')
+}

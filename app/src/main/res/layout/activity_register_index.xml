@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main"
+    android:orientation="horizontal"
+    tools:context="com.example0.checkmachine.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="320dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="100dp">
+        <LinearLayout
+            android:id="@+id/ll_register"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/faceregister"
+                android:scaleType="centerCrop"></ImageView>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginLeft="900dp"
+        android:layout_marginTop="200dp"
+        android:layout_width="360dp"
+        android:layout_height="320dp">
+        <LinearLayout
+            android:id="@+id/ll_manager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/face_manage"></ImageView>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

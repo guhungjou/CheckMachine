@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main"
+    android:orientation="horizontal"
+    tools:context="com.example0.checkmachine.HomeActivity">
+<!--    <Button-->
+<!--        android:id="@+id/btn_test"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:text="test"></Button>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="测试版"-->
+<!--        android:textSize="30sp"></TextView>-->
+    <TextureView
+        android:id="@+id/check_rgb_texture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0" />
+<Button
+        android:id="@+id/btn_test"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="test"></Button>
+    <TextureView
+        android:id="@+id/check_nir_texture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0" />
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="320dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="100dp">
+        <LinearLayout
+            android:id="@+id/ll_morningcheck"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/moringchecking"
+                android:scaleType="centerCrop"></ImageView>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginLeft="900dp"
+        android:layout_marginTop="200dp"
+        android:layout_width="360dp"
+        android:layout_height="320dp">
+        <LinearLayout
+            android:id="@+id/ll_install"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/install"></ImageView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progress_group"
+        android:layout_width="380dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="515dp"
+        android:layout_marginTop="400dp"
+        android:background="#50000000">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:text="人脸库加载中"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="300dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_horizontal"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/progressbar_bg" />
+
+            <TextView
+                android:id="@+id/progress_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

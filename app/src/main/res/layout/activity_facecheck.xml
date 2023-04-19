@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/moringloading"
+    android:orientation="horizontal">
+
+    <!--********** 预览区域 **********-->
+    <RelativeLayout
+        android:layout_width="1280dp"
+        android:layout_height="720dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+        <com.baidu.idl.main.facesdk.attendancelibrary.camera.AutoTexturePreviewView
+            android:id="@+id/auto_camera_preview_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextureView
+            android:id="@+id/draw_detect_face_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextureView
+            android:id="@+id/draw_face_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/check_hint"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/blue"
+        android:text="未检测到注册用户！"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/red"
+        android:layout_gravity="center_horizontal"></TextView>
+
+    <ImageView
+        android:layout_width="233dp"
+        android:layout_height="230dp"
+        android:layout_marginLeft="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sun"></ImageView>
+
+    <ImageView
+        android:layout_width="247dp"
+        android:layout_height="212dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cloud"></ImageView>
+
+    <ImageView
+        android:layout_width="216dp"
+        android:layout_height="220dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/left2"></ImageView>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="223dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/right2"></ImageView>
+
+</FrameLayout>
